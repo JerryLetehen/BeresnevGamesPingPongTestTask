@@ -22,7 +22,5 @@ public class TouchListener : MonoBehaviour, IDragHandler
             var delta = eventData.delta / canvas.scaleFactor;
             myPad.Move(delta.x);
         }
-        
-        
     }
 }
