@@ -7,7 +7,6 @@ public class GateBehavior : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        Debug.LogError("here");
         if (ballsTable.TryGetValue(other, out var ballBehavior))
         {
             ballBehavior.Restart();

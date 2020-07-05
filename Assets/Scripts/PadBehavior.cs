@@ -1,16 +1,17 @@
+using System;
 using UnityEngine;
 
 public class PadBehavior : MonoBehaviour
 {
     [SerializeField] private RectTransform rectTransform;
     [SerializeField] private RectTransform area;
-    
+
     private float minX;
     private float maxX;
     private Vector3[] padCorners = new Vector3[4];
     private float halfWidth;
     private Transform tr;
-    
+
     private void Start()
     {
         tr = rectTransform.transform;
