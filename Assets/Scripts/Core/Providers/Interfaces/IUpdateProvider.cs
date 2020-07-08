@@ -5,5 +5,6 @@ namespace PingPong.Core.Providers
     public interface IUpdateProvider
     {
         event Action OnUpdate;
+        event Action OnLateUpdate;
     }
 }
