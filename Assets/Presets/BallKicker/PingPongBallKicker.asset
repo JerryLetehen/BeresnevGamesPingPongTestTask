@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d254f86dfaf4612bf95895c34e1b166, type: 3}
   m_Name: PingPongBallKicker
   m_EditorClassIdentifier: 
-  defaultBallImpulse: 5
+  defaultBallImpulse: 10
+  deniedKickAngle: 45
