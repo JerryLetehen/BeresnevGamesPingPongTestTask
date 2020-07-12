@@ -3,7 +3,7 @@ using PingPong.Game.Interfaces;
 
 namespace PingPong.Datas
 {
-    public class PingPongGameData : IGameData
+    public struct PingPongGameData : IGameData
     {
         public Tuple<IGate, IGate> Gates { get; }
         public IBall Ball { get; }

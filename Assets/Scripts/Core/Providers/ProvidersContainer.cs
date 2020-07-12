@@ -14,7 +14,7 @@ namespace PingPong.Core.Providers
             AddProvider(new EventBus() as IEventBus);
         }
 
-        public T GetProvider<T>()
+        public T GetProvider<T>() where
         {
             if (providers.TryGetValue(typeof(T), out var result))
             {
@@ -24,15 +24,9 @@ namespace PingPong.Core.Providers
             return default;
         }
 
-        public bool AddProvider<T>(T provider)
+        public void AddProvider<T>(T provider)
         {
-            if (providers.ContainsKey(typeof(T)))
-            {
-                return false;
-            }
-
-            providers.Add(typeof(T), provider);
-            return true;
+            providers[typeof(T)] = provider;
         }
     }
 }

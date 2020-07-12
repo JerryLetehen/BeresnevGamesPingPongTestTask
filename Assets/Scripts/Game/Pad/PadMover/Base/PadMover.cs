@@ -5,13 +5,13 @@ namespace PingPong
 {
     public abstract class PadMover
     {
-        protected Canvas canvas;
+        protected float scaleFactor;
         private PadBehavior pad;
 
-        public PadMover(PadBehavior pad, Canvas canvas)
+        public PadMover(PadBehavior pad, float scaleFactor)
         {
             this.pad = pad;
-            this.canvas = canvas;
+            this.scaleFactor = scaleFactor;
         }
 
         public abstract void OnDrag(PointerEventData eventData);

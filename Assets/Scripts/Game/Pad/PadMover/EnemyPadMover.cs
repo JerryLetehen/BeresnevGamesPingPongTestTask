@@ -5,7 +5,7 @@ namespace PingPong
 {
     public class EnemyPadMover : PadMover
     {
-        public EnemyPadMover(PadBehavior pad, Canvas canvas) : base(pad, canvas)
+        public EnemyPadMover(PadBehavior pad, float scaleFactor) : base(pad, scaleFactor)
         {
         }
 
@@ -13,7 +13,7 @@ namespace PingPong
         {
             if (eventData.pressPosition.y > Screen.height / 2f)
             {
-                var delta = eventData.delta / canvas.scaleFactor;
+                var delta = eventData.delta / scaleFactor;
                 MovePad(delta.x);
             }
         }

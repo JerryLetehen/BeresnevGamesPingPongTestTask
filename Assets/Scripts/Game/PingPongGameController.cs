@@ -28,7 +28,6 @@ namespace PingPong
             game = new PingPongGame().Init(new PingPongGameData(gameField.Gates, ballBehavior, gameField.FieldInfo, ballKicker));
             game.Start();
 
-
             InitPads();
 
             InitTouchListener();
@@ -45,9 +44,12 @@ namespace PingPong
         private void InitTouchListener()
         {
             var padMovers = new PadMover[pads.Length];
-            padMovers[0] = new PlayerPadMover(pads[0], canvas);
-            padMovers[1] = new EnemyPadMover(pads[1], canvas);
+            float scaleFactor = canvas.scaleFactor;
+            padMovers[0] = new PlayerPadMover(pads[0], scaleFactor);
+            padMovers[1] = new EnemyPadMover(pads[1], scaleFactor);
             touchListener.Init(padMovers);
         }
     }
+    
+    // TODO: 
 }
