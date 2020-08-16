@@ -1,1 +1,1 @@
-# BeresnevGamesPingPongTestTask
+# PingPongTestTask
